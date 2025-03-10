@@ -3,14 +3,6 @@ import sqlite3
 conn = sqlite3.connect("test.db")
 cursor = conn.cursor()
 
-# Оставил закомментированный код специально
-# cursor.executescript(
-#     """
-#     DELETE FROM Orders;
-#     DELETE FROM Users;
-#     """
-# )
-
 cursor.executescript(
     """
     DROP TABLE IF EXISTS Orders;
